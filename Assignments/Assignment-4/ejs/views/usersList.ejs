@@ -1,0 +1,16 @@
+<%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+    <%- include('./partials/navigation.ejs') %>
+    <h1>Add Users</h1>
+    <% if(users.length > 0) { %>
+    <ul>
+        <% for(let user of users) {%>
+        <li><%= user.name %></li>
+        <% } %>
+    </ul>
+    <% } else{ %>
+        <h1>No Users</h1>
+    <% } %>
+<%- include('./partials/end.ejs') %>
